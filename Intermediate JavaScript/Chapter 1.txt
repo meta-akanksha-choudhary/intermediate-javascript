@@ -1,0 +1,7 @@
+const getSecondLargestAndSmallestNumber = (arr) => {
+  arr.sort((x,y) => { return x-y; });
+  arr = [...new Set(arr)];
+  let result = [arr[1],arr[arr.length-2]];
+  console.log('result'+result);
+  return result.join(',');
+};

@@ -1,0 +1,15 @@
+const fibonacciSeries = (num) => {
+    if(num < 2) {
+        return num;
+    }
+    else {
+        return fibonacciSeries(num-1) + fibonacciSeries(num - 2);
+    }
+}
+let nTerms = 8;
+
+let fibonacciPattern = '';
+for(let i = 0; i < nTerms; i++) {
+    fibonacciPattern += fibonacciSeries(i) + ' ';
+}
+console.log(fibonacciPattern);

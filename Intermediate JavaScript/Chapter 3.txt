@@ -1,0 +1,26 @@
+let students = [
+    ['David', 80],
+    ['Vinoth', 77],
+    ['Divya', 88],
+    ['Ishitha', 95],
+    ['Thomas', 68]
+], totalMarks = 0, avg, grade;
+
+for (let i=0; i < students.length; i++) {
+        totalMarks += students[i][1];
+}
+avg = (totalMarks/students.length);
+
+grade = avg < 60 
+        ? 'F' 
+        : avg < 70
+        ? 'D'
+        : avg < 80
+        ? 'C'
+        : avg < 90
+        ? 'B'
+        : 'A';
+
+console.log("Average marks: " + avg);
+console.log("Grade : " + grade);
+
